@@ -268,7 +268,7 @@ function M.escape_special_chars(path)
     return path
   end
   print("Original path: " .. path)
-  print("Escaped path: " .. path:gsub("%(", "\\/("):gsub("%)", "\\/)")
+  print("Escaped path: " .. path:gsub("%(", "\\/("):gsub("%)", "\\/)"))
   return M.is_windows and path:gsub("%(", "\\/("):gsub("%)", "\\/)") or path
 end
 
