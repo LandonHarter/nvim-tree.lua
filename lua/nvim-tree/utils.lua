@@ -267,9 +267,7 @@ function M.escape_special_chars(path)
   if path == nil then
     return path
   end
-  print("Original path: " .. path)
-  print("Escaped path: " .. path:gsub("%(", "\\/("):gsub("%)", "\\/)"))
-  return M.is_windows and path:gsub("%(", "\\/("):gsub("%)", "\\/)") or path
+  return M.is_windows and path:gsub("%(", "/("):gsub("%)", ")") or path
 end
 
 --- Create empty sub-tables if not present
